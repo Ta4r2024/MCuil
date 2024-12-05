@@ -105,6 +105,10 @@ local Tab = Window:NewTab("Misc")
 
 local Section = Tab:NewSection("Misc")
 
+Section:NewSlider("Zoom", "SliderInfo", 120, 0, function(t) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Workspace.Camera.FieldOfView = t
+end)
+
 Section:NewButton("Infinite Yield", "ButtonInfo", function()
     loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
 end)
